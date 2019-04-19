@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.LoginActivity">
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_searchme"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:id="@+id/logo_image"
+        />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_email_layout"
+        android:layout_below="@id/logo_image"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        >
+
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:id="@+id/UserEmail"
+            android:padding="8dp"
+
+
+            />
+
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_email_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Log In"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:background="@color/colorPrimaryDark"
+        android:textAllCaps="false"
+        android:layout_marginLeft="16dp"
+        android:onClick="LogInProcess"
+        android:id="@+id/login_button"
+        android:fontFamily="sans-serif-condensed"
+
+        />
+
+    <android.support.design.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_centerHorizontal="true"
+
+        android:text="Sign Up"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:backgroundTint="#410cff"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginLeft="16dp"
+        android:onClick="LogInProcess"
+        android:id="@+id/SignUp"
+       android:fontFamily="sans-serif-condensed"
+
+        />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Forget Password?"
+       android:textColor="@color/colorPrimaryDark"
+       android:layout_below="@id/SignUp"
+       android:textStyle="bold"
+       android:layout_marginStart="16dp"
+       android:layout_marginLeft="16dp"
+       android:fontFamily="sans-serif-condensed"
+
+       />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:indeterminateDrawable="@drawable/progress" >
+    </ProgressBar>
+</RelativeLayout>
